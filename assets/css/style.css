@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bcgrnd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  min-height: 100vh;
+}
+
+.cardbox {
+  display: flex;
+  flex-flow: row nowrap;
+
+  max-width: 540px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.userphoto {
+  display: flex;
+
+  width: 40%;
+  object-fit: cover;
+  object-position: center;
+
+  clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+}
+
+.infobox {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 60%;
+
+  padding: 45px;
+}
+
+.usercredential {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.username {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.userlink {
+  text-decoration: none;
+  color: black;
+  opacity: 60%;
+  padding-bottom: 5px;
+}
+
+.overflow-protect {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.userstats {
+  display: flex;
+  flex-flow: row nowrap;
+
+  margin: -15px;
+}
+
+.userstats-item {
+  display: flex;
+  flex-flow: column nowrap;
+
+  opacity: 40%;
+  margin: 15px;
+}
+
+.userstats-item-numb {
+  padding-top: 10px;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 576px) and (orientation: portrait) {
+  .cardbox {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 300px;
+  }
+
+  .userphoto{
+    width: 100%;
+    clip-path: none;
+  }
+
+  .infobox{
+    padding: 10px;
+    width: 100%;
+  }
+
+  .username {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
+
+  .userlink{
+    margin-bottom: 15px;
+  }
+
+  .userstats-item-numb{
+    font-size: 1.2rem;
+    padding-top: 5px;
+  }
+}
