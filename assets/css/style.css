@@ -8,6 +8,7 @@ body {
 
 .bcgrnd {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   background-color: gray;
@@ -17,11 +18,14 @@ body {
 .cardbox {
   display: flex;
   flex-flow: row nowrap;
+  position: relative;
 
   max-width: 540px;
   background-color: white;
   border-radius: 5px;
-  overflow: hidden;
+  
+
+  margin: 10px;
 }
 
 .userphoto {
@@ -32,6 +36,8 @@ body {
   object-position: center;
 
   clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .infobox {
@@ -87,6 +93,33 @@ body {
   font-size: 1.4rem;
 }
 
+.plus-btn{
+  position: absolute;
+  top: 35%;
+  left: 95%;
+  
+  
+
+  padding: 20px;
+  background-color: yellow;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.pro-user{
+  position: absolute;
+
+  top: 11%;
+  left: 89%;
+
+  background-color: gray;
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+
+  font-size: 0.7rem;
+}
+
 @media screen and (max-width: 576px) and (orientation: portrait) {
   .cardbox {
     display: flex;
@@ -97,6 +130,9 @@ body {
   .userphoto{
     width: 100%;
     clip-path: none;
+
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
   }
 
   .infobox{
@@ -113,8 +149,24 @@ body {
     margin-bottom: 15px;
   }
 
+  .userstats{
+    margin-bottom: 15px;
+  }
+
   .userstats-item-numb{
     font-size: 1.2rem;
     padding-top: 5px;
+  }
+
+  .plus-btn{
+    top: 93%;
+    left: 40%;
+   
+    font-size: 1.2rem;
+  }
+  
+  .pro-user{
+    top: 7%;
+    left: 80%;
   }
 }
